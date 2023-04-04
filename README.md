@@ -15,4 +15,4 @@ e está pronto!
 ## Criando automatização para o horário do almoço
 `crontab -e`
 
-`11 50 * * * node ~/caminho/do/script/index.js`
+`50 11 * * * node ~/caminho/do/script/index.js`
