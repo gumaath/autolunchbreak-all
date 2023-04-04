@@ -4,8 +4,9 @@ import { createRequire } from "module";
 (async () => {
   const require = createRequire(import.meta.url);
   const credentials = require("./credentials.json");
+  const headless = true; // Mude para ver o navegador
 
-  const browser = await puppeteer.launch({headless: false});
+  const browser = await puppeteer.launch({headless: headless});
   const page = await browser.newPage();
   const email = credentials.email;
   const password = credentials.password;
@@ -36,12 +37,12 @@ import { createRequire } from "module";
   await allstrategy.click();
 
 
-  const pausecontainer = await page.waitForSelector('#timeman-container');
-  await page.waitForTimeout(2000);
+  const pausecontainer = await page.waitForSelector('.timeman-container');
+  await page.waitForTimeout(15000);
   await pausecontainer.click();
 
-  const pause = await page.waitForSelector('.tm-btn-start');
-  await page.waitForTimeout(2000);
+  const pause = await page.waitForSelector('.tm-popup-timeman-layout-time > button');
+  await page.waitForTimeout(4000);
   await pause.click();
 
   console.log("Hora de trabalho retomada/pausada");
