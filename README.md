@@ -13,6 +13,19 @@ e está pronto!
 
 ---
 ## Criando automatização para o horário do almoço
+1. Descubra o caminho do seu node com `which node`
+2. Depois crie as crontabs:
 `crontab -e`
 
-`50 11 * * * node ~/caminho/do/script/index.js`
+```
+# Entrada
+40 8 * * * {caminho do node}/node ~/caminho/do/script/index.js
+# Almoço
+00 12 * * * {caminho do node}/node ~/caminho/do/script/index.js
+# Volta do almoço
+30 13 * * * {caminho do node}/node ~/caminho/do/script/index.js`
+```
+
+### TODO
+- [ ] Criar para o PontoMais
+- [ ] Fazer para encerrar o dia também
