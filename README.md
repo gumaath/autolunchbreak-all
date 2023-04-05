@@ -12,7 +12,7 @@
 e está pronto!
 
 ---
-## Criando automatização para o horário do almoço
+## Criando automatização para executar o script
 1. Descubra o caminho do seu node com `which node`
 2. Depois crie as crontabs:
 `crontab -e`
@@ -30,6 +30,7 @@ Alternativamente,
 Pode utilizar o `crontab-ui` para facilitar a criação das crontabs
 
 `npm install -g crontab-ui`
+
 `crontab-ui`
 
 ### TODO
